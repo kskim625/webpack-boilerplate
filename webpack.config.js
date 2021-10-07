@@ -32,6 +32,18 @@ module.exports = {
                 loader: 'babel-loader'
             }
         },
+        {
+            test: /\.svg/,
+            exclude: /node_modules/,
+            use: [
+                {
+                    loader: 'url-loader',
+                    options: {
+                        esModule: false,
+                    }
+                }
+            ],
+        },
     ]},
     devServer: {
         static: {

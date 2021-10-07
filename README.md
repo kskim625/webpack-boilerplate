@@ -10,6 +10,8 @@
 ## 기능
 1. babel연동 (target : ie11로 설정되어있음)
 2. ./src/javascripts 프론트 MVC패턴 적용
-3. webpack html / scss / js 파일 번들링
- -> html / scss 내에 있는 이미지 파일들은 해쉬값으로 이름이 정해져서 dist 폴더에 저장
- -> webpack에서 MiniCssExtractorPlugin, HTMLWebpackPlugin 등 사용 가능 (package.json 파일 확인)
+3. webpack html / scss / js / svg 파일 번들링
+    - js 파일 내에 있는 이미지 svg 파일들은 bundle.js 파일에 모듈로 번들링
+        - js 파일 내에서 src=require("url") 형식으로 사용
+        - 필요 시 jpg, png 등 확장자 추가하여 사용 가능
+    - webpack에서 MiniCssExtractorPlugin, HTMLWebpackPlugin 등 사용 가능 (package.json 파일 확인)
